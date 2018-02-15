@@ -1,0 +1,58 @@
+// diseño atomico
+// metodología BEM
+
+// Variables
+
+GrisH2 = #fff
+GrisH = #EDEDED
+Gris = #969696
+GrisB = #686B64
+GrisB2 = #222222
+Amarillo = #F8C816
+
+// =============================================
+//                 Átomos
+// =============================================
+*
+	color GrisB2
+body
+	background GrisB2
+	h1
+		background Amarillo
+	h2
+		color Amarillo
+.imgPerfil
+	width 150px
+	height 150px
+	border-radius 50%
+	border 3px solid Amarillo
+	box-shadow 3px 3px 10px 5px GrisB
+.imgLogo
+	width 250px
+// =============================================
+//                 Organisms
+// =============================================
+
+// =============================================	
+//                  Template
+// =============================================
+
+.mainContainer
+	display flex
+	justify-content space-between
+	width 70%
+	margin auto
+
+
+.yoContainer
+	width 35%
+	height 100vh
+// =============================================
+//                    Pages
+// =============================================
+
+.mainContainer
+	background GrisB
+
+.yoContainer
+	background Gris
