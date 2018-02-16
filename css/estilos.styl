@@ -2,14 +2,17 @@
 // metodología BEM
 
 // Variables
-
+	//Colores
 GrisH2 = #fff
 GrisH = #EDEDED
 Gris = #969696
 GrisB = #686B64
 GrisB2 = #222222
 Amarillo = #F8C816
-
+	//Tamaños Media Query
+	SizeL = 1300px
+	SizeM = 940px
+	SizeS = 600px
 // =============================================
 //                 Átomos
 // =============================================
@@ -17,10 +20,10 @@ Amarillo = #F8C816
 	color GrisB2
 body
 	background GrisB2
-	h1
-		background Amarillo
-	h2
-		color Amarillo
+h1
+	background Amarillo
+h2
+	color Amarillo
 .imgPerfil
 	width 150px
 	height 150px
@@ -30,29 +33,54 @@ body
 .imgLogo
 	width 250px
 // =============================================
+//                 molecules
+// =============================================
+.main--title
+	display flex
+	justify-content space-around
+	align-items center
+	background Amarillo
+// =============================================
 //                 Organisms
 // =============================================
 
-// =============================================	
+// =============================================
 //                  Template
 // =============================================
-
 .mainContainer
-	display flex
-	justify-content space-between
-	width 70%
-	margin auto
-
-
+	position absolute
+	top 0px
+	left 40vw
+	background GrisB
+	width 45vw
+	@media (max-width: SizeM)
+		left 40vw
+		width 60vw
+	@media (max-width: SizeS)
+		left 0vw
+		width 100vw
 .yoContainer
-	width 35%
+	display flex
+	flex-direction column
+	justify-content space-around
+	align-items center
+	width 25vw
 	height 100vh
+	position fixed
+	top 0px
+	left 15vw
+	background Gris
+	@media (max-width: SizeM)
+		left 0vw
+		width 40vw
+
+	@media (max-width: SizeS)
+		width 100vw
+		left -99vw
+		&:hover
+			left 0vw
+
+
 // =============================================
 //                    Pages
 // =============================================
-
-.mainContainer
-	background GrisB
-
-.yoContainer
-	background Gris
