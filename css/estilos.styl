@@ -13,6 +13,12 @@ Amarillo = #F8C816
 	SizeL = 1300px
 	SizeM = 940px
 	SizeS = 600px
+	//variables para las resdes sociales
+	ImgRedes = 30px
+
+
+//Funtions
+spriteRedes(idred, )
 // =============================================
 //                 Átomos
 // =============================================
@@ -24,6 +30,9 @@ h1
 	background Amarillo
 h2
 	color Amarillo
+ul
+	padding-left 0px
+	list-style-type none
 .imgPerfil
 	width 150px
 	height 150px
@@ -32,6 +41,30 @@ h2
 	box-shadow 3px 3px 10px 5px GrisB
 .imgLogo
 	width 250px
+.footer--img
+	border-radius 15%
+	width ImgRedes
+	height ImgRedes
+	background-image url('../img/spriteRedesSociales.png')
+	// background-repeat no-repeat
+	background-size ImgRedes*6 ImgRedes*2
+	background-position 0px 0px
+for row in  1 2 3 4 5
+	if row == 1
+		variableRow = 0
+	else if row == 2
+		variableRow = 1
+	else if row == 4
+		variableRow = 5
+	else if row == 5
+		variableRow = 2
+	else
+		variableRow = row
+	.footer--ul li:nth-child({row}) .footer--img
+		background-position -30px*variableRow 30px
+		&:hover
+			background-position -30px*variableRow 0px
+
 // =============================================
 //                 molecules
 // =============================================
@@ -43,7 +76,12 @@ h2
 // =============================================
 //                 Organisms
 // =============================================
-
+.footer--yoContainer
+	width 100%
+.footer--ul
+	width 100%
+	display flex
+	justify-content: space-around
 // =============================================
 //                  Template
 // =============================================
